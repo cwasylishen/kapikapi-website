@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Menu" description="Explore our epic organic menu.">
+	<div class="page-header bg-dark text-center">
+		<div class="container">
+			<h1 class="text-h1 mb-2">Our Menu</h1>
+			<p class="text-lead" style="color: var(--color-text-light);">Organic, nourishing, and locally sourced.</p>
+		</div>
+	</div>
+
+	<div class="container section">
+		<div class="menu-nav mb-8">
+			<!-- This could be interactive with JS -->
+			<button class="badge badge-accent" style="font-size:1rem; padding:0.5rem 1rem;">All</button>
+			<button class="badge" style="font-size:1rem; padding:0.5rem 1rem; background: var(--color-bg-secondary); color: var(--color-text-main);">Juice Bar</button>
+			<button class="badge" style="font-size:1rem; padding:0.5rem 1rem; background: var(--color-bg-secondary); color: var(--color-text-main);">Elixirs</button>
+			<button class="badge" style="font-size:1rem; padding:0.5rem 1rem; background: var(--color-bg-secondary); color: var(--color-text-main);">Food</button>
+		</div>
+
+		<div class="menu-section mb-8">
+			<h2 class="text-h2 mb-4" style="border-bottom: 2px solid var(--color-bg-secondary); padding-bottom: 1rem;">Organic Juice Bar</h2>
+			<div class="grid-2">
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Ginger Greens</h3>
+						<span class="price text-h4">$6</span>
+					</div>
+					<p class="text-body text-muted mt-1">Celery, cucumber, apple, ginger.</p>
+				</div>
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Deep Roots</h3>
+						<span class="price text-h4">$6</span>
+					</div>
+					<p class="text-body text-muted mt-1">Beet, carrot, ginger, turmeric.</p>
+				</div>
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Turmeric Lime Elixir</h3>
+						<span class="price text-h4">$5</span>
+					</div>
+					<p class="text-body text-muted mt-1">Fresh lime juice, turmeric, ginger, honey, black pepper.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-section mb-8">
+			<h2 class="text-h2 mb-4" style="border-bottom: 2px solid var(--color-bg-secondary); padding-bottom: 1rem;">Hot Drinks & Superfood Elixirs</h2>
+			<div class="grid-2">
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Golden Moon Milk</h3>
+						<span class="price text-h4">$7</span>
+					</div>
+					<p class="text-body text-muted mt-1">Turmeric, Reishi, Ashwagandha, Lucuma, Blue Lotus, Vanilla, Cardamom, Lavender, Black Pepper. Sweetened with organic honey or stevia.</p>
+				</div>
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Mushroom Mocha</h3>
+						<span class="price text-h4">$6</span>
+					</div>
+					<p class="text-body text-muted mt-1">Loaded with adaptogenic plant medicines.</p>
+				</div>
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Dirty Rose Chai</h3>
+						<span class="price text-h4">$6</span>
+					</div>
+					<p class="text-body text-muted mt-1">Served with organic coconut milk, organic soy milk or fresh homemade organic hemp milk.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-section mb-8">
+			<h2 class="text-h2 mb-4" style="border-bottom: 2px solid var(--color-bg-secondary); padding-bottom: 1rem;">Epic Food</h2>
+			<p class="text-body mb-4">We offer a wide selection of casual fare, including vegan delights, seafood, and organic-fed, free-range chicken.</p>
+			<div class="grid-2">
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Yucca Crust Pizza</h3>
+						<span class="price text-h4">$12</span>
+					</div>
+					<p class="text-body text-muted mt-1">Homemade fresh organic yucca crust, with local or vegan cheese.</p>
+				</div>
+				<div class="menu-item">
+					<div class="flex-between">
+						<h3 class="text-h4">Wild Alaskan Sockeye Salmon</h3>
+						<span class="price text-h4">$18</span>
+					</div>
+					<p class="text-body text-muted mt-1">Glazed with a mildly spicy maple mustard sauce, black rice and organic baby carrots.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center mt-8">
+		  <a href="https://kapikapichirripo.com/grocery-order-form/" target="_blank" class="btn btn-primary">Order For Pickup</a>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.page-header {
+		padding: 6rem 0 4rem;
+	}
+	
+	.menu-nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	.menu-nav button {
+		border: none;
+		cursor: pointer;
+		transition: all var(--transition-fast);
+	}
+	
+	.menu-nav button:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.menu-item {
+		padding: 1.5rem;
+		background: white;
+		border-radius: var(--radius-md);
+		border: 1px solid var(--color-bg-secondary);
+		transition: transform var(--transition-fast);
+	}
+	
+	.menu-item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.price {
+		color: var(--color-accent);
+	}
+</style>

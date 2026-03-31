@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us" description="Get in touch with Kapi Kapi Chirripo.">
+	<div class="page-header bg-dark text-center">
+		<div class="container">
+			<h1 class="text-h1 mb-2">Contact Us</h1>
+			<p class="text-lead" style="color: var(--color-text-light);">We'd love to hear from you.</p>
+		</div>
+	</div>
+
+	<div class="container section">
+		<div class="grid-2">
+			<div>
+				<h2 class="text-h2 mb-4">Get in Touch</h2>
+				<p class="text-body mb-4">Please reach out and let us know if there is anything you think we should carry in our store, or for other inquiries. We will get back to you as soon as we can.</p>
+				
+				<div class="contact-details mt-8">
+					<div class="mb-4">
+						<h3 class="text-h4">WhatsApp</h3>
+						<p class="text-body" style="font-size: 1.25rem;">
+							<a href="https://wa.me/50683383422" target="_blank" style="color: var(--color-success); font-weight: 600;">(506) 8338-3422</a>
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3 class="text-h4">Email</h3>
+						<p class="text-body" style="font-size: 1.25rem;">
+							<a href="mailto:orders@kapikapichirripo.com" style="color: var(--color-accent); font-weight: 600;">orders@kapikapichirripo.com</a>
+						</p>
+					</div>
+					<div class="mb-4">
+						<h3 class="text-h4">Location</h3>
+						<p class="text-body text-muted">
+							We are located before the bridge to San Gerardo de Rivas, about 20 minutes drive from San Isidro de General towards Chirripo National Park.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card p-4" style="padding: 2rem;">
+				<h3 class="text-h3 mb-4">Send a Message</h3>
+				<form class="contact-form" onsubmit="event.preventDefault(); alert('This is a static site demo. In production, this form would be connected to an endpoint.');">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" required class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" required class="form-control"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary w-100" style="width: 100%;">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.page-header {
+		padding: 6rem 0 4rem;
+	}
+	
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+	
+	.form-group label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+	}
+	
+	.form-control {
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-radius: var(--radius-sm);
+		font-family: inherit;
+		font-size: 1rem;
+		transition: border-color var(--transition-fast);
+	}
+	
+	.form-control:focus {
+		outline: none;
+		border-color: var(--color-primary);
+	}
+</style>

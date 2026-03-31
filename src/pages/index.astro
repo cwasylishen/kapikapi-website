@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Home Page" description="Welcome to Kapi Kapi Chirripo Organic Foods & Cafe.">
+	<section class="hero-section">
+		<div class="hero-background">
+			<!-- Instead of a generated building image, use a subtle pattern or a real ingredient close-up later -->
+			<div class="hero-overlay"></div>
+		</div>
+		<div class="container hero-content">
+			<span class="badge mb-2 badge-accent animate-on-scroll">Eco Mercado & Cafe</span>
+			<h1 class="text-h1 text-white mb-4 animate-on-scroll" style="animation-delay: 0.1s;">Nourish Your Body and Soul</h1>
+			<p class="text-lead text-white mb-8 animate-on-scroll" style="max-width: 600px; animation-delay: 0.2s;">
+				Whether enjoying our homemade fresh organic yucca crust pizza, a fresh cold-pressed organic juice, or a hot superfoods elixir, we are committed to nourishing you in a relaxing environment surrounded by the natural beauty of the Chirripo river.
+			</p>
+			<div class="hero-actions animate-on-scroll" style="animation-delay: 0.3s;">
+				<a href="/menu" class="btn btn-primary">View Our Menu</a>
+				<a href="https://kapikapichirripo.com/grocery-order-form/" target="_blank" class="btn btn-outline" style="border-color: white; color: white;">Order Groceries</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section bg-secondary">
+		<div class="container">
+			<div class="text-center mb-8">
+				<h2 class="text-h2">The Kapi Kapi Experience</h2>
+				<p class="text-lead mt-2" style="max-width: 700px; margin-left: auto; margin-right: auto;">We source the highest quality certified organic, natural and local products and food ingredients. We are committed to your health!</p>
+			</div>
+			
+			<div class="grid-3 animate-on-scroll">
+				<Card 
+					title="Organic Grocer" 
+					description="We are dedicated to sourcing the highest quality certified organic, and natural foods, local whenever possible. We also offer a wide range of health and beauty products."
+					badge="Store"
+				/>
+				<Card 
+					title="Natural & Organic Restaurant" 
+					description="Overlooking the Rio Blanco river, our vegetarian-friendly restaurant provides healthiest and tastiest food. We primarily use organic and local ingredients."
+					badge="Cafe"
+					badgeType="accent"
+				/>
+				<Card 
+					title="Juice Bar & Elixirs" 
+					description="Enjoy delicious and nutritious organic cold-pressed juices and tonics. Try our Ginger Greens, Deep Roots, or Turmeric Lime Elixir."
+					badge="Drinks"
+					badgeType="success"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="grid-2 align-center" style="gap: 4rem;">
+				<div class="animate-on-scroll">
+					<h2 class="text-h2 mb-4">Epic Food for Every Diet</h2>
+					<p class="text-body mb-4">
+						Finding organic and wholesome foods can be challenging in Costa Rica. That is why we go out of our way to source products from certified organic farmers and food producers.
+					</p>
+					<p class="text-body mb-8">
+						Lead by our experienced chef Alonso, our fully licensed restaurant offers a wide selection of casual fare, pizzas with organic kamut or fresh organic yuca crust, burgers, sandwiches, vegan delights, seafood, and organic-fed, free-range chicken.
+					</p>
+					<a href="/menu" class="btn btn-primary">Explore Our Menu</a>
+				</div>
+				<div class="image-grid animate-on-scroll" style="animation-delay: 0.2s;">
+					<!-- Using placeholders until real images are inserted -->
+					<div class="img-placeholder" style="background: var(--color-primary-light);"></div>
+					<div class="img-placeholder" style="background: var(--color-accent);"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section bg-dark text-center">
+		<div class="container animate-on-scroll">
+			<h2 class="text-h2 mb-4">Community Events</h2>
+			<p class="text-lead text-white mb-8" style="max-width: 600px; margin: 0 auto 2rem;">
+				Kapi Kapi is pleased to offer Community Open Mic and Karaoke every Saturday evening starting at 6pm. Jams, improvs, slam poets, comedy skits and more are welcome!
+			</p>
+			<a href="/events" class="btn btn-accent">View Upcoming Events</a>
+		</div>
+	</section>
+
+	<section class="section bg-secondary">
+		<div class="container animate-on-scroll">
+			<h2 class="text-h2 text-center mb-8">Who We Are</h2>
+			<div class="grid-3">
+				<div class="card p-4">
+					<h3 class="text-h4 mb-2">Michael Gallant</h3>
+					<p class="text-small text-muted">Michael has managed a community grocery store, a small chain of fair-trade cafes, and has been dedicated to holistic lifestyle for a quarter century. He manages general business operations.</p>
+				</div>
+				<div class="card p-4">
+					<h3 class="text-h4 mb-2">Lazarina Todorova</h3>
+					<p class="text-small text-muted">Lazarina manages purchasing, events and marketing. Through her healing journey in overcoming Lyme disease, she has gained first-hand knowledge about the importance of a healthy lifestyle and herbology.</p>
+				</div>
+				<div class="card p-4">
+					<h3 class="text-h4 mb-2">Andrew Rezmer</h3>
+					<p class="text-small text-muted">A serial social entrepreneur and owner of the successful organic grocery store and vegan cafe, Eternal Abundance in Vancouver. He has been working in the holistic health space for decades.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-section {
+		position: relative;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		padding: 6rem 0;
+	}
+
+	.hero-background {
+		position: absolute;
+		inset: 0;
+		/* Use a deep green gradient for now, can be replaced by real bg image */
+		background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+		z-index: -1;
+	}
+
+  .text-white {
+    color: #ffffff;
+  }
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 10;
+	}
+	
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.p-4 {
+		padding: 1.5rem;
+	}
+	
+	.image-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	
+	.img-placeholder {
+		aspect-ratio: 4/5;
+		border-radius: var(--radius-md);
+		box-shadow: var(--shadow-md);
+	}
+
+	.img-placeholder:first-child {
+		transform: translateY(2rem);
+	}
+</style>

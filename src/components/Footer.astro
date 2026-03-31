@@ -1,0 +1,108 @@
+---
+const today = new Date();
+---
+
+<footer class="footer bg-dark">
+  <div class="container">
+    <div class="footer-grid grid-3">
+      <div class="footer-section">
+        <h3 class="footer-title">Kapi Kapi Chirripo</h3>
+        <p class="text-body mt-2 mb-2">Organic and natural grocery store and cafe located in San Gerardo de Rivas, in the beautiful Chirripo mountain area of Costa Rica.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/kapikapichirripo/" target="_blank" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com/kapikapichirripo/" target="_blank" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-title">Hours</h4>
+        <dl class="hours-list mt-2">
+          <div class="hours-group">
+            <dt>Grocery Store</dt>
+            <dd>Mon - Sun: 10am - 8pm</dd>
+          </div>
+          <div class="hours-group mt-1">
+            <dt>Restaurant</dt>
+            <dd>Mon - Fri: 12pm - 8pm</dd>
+            <dd>Sat - Sun: 10am - 8pm</dd>
+          </div>
+        </dl>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-title">Contact</h4>
+        <ul class="contact-info mt-2">
+          <li><strong>WhatsApp:</strong> (506) 8338-3422</li>
+          <li><strong>Email:</strong> orders@kapikapichirripo.com</li>
+          <li class="mt-1">
+            <strong>Location:</strong><br/>
+            Before the bridge to San Gerardo de Rivas, approx. 20m drive from San Isidro de General towards Chirripo National Park.
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {today.getFullYear()} Kapi Kapi Chirripo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-title {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+  }
+  
+  .social-links a:hover {
+    color: var(--color-accent);
+  }
+  
+  .hours-list dt {
+    font-weight: 600;
+    color: var(--color-primary-light);
+  }
+  
+  .hours-list dd {
+    margin-left: 0;
+    color: var(--color-text-muted); /* overridden by bg-dark text color somewhat */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .contact-info {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .contact-info strong {
+    color: var(--color-primary-light);
+  }
+  
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+</style>

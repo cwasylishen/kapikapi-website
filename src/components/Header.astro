@@ -1,0 +1,113 @@
+---
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Menu', href: '/menu' },
+  { name: 'Events', href: '/events' },
+  { name: 'Loyalty', href: '/loyalty' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<header class="header glassmorphism">
+  <div class="container header-container">
+    <a href="/" class="logo flex-center">
+      <span class="logo-text">Kapi Kapi</span>
+    </a>
+
+    <nav class="nav-links">
+      <ul class="nav-list">
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class="nav-link">{link.name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://kapikapichirripo.com/grocery-order-form/" target="_blank" class="btn btn-accent">Order Pickup</a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    letter-spacing: -0.02em;
+  }
+
+  .nav-list {
+    display: none;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: var(--color-text-main);
+    position: relative;
+    padding-bottom: 0.25rem;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width var(--transition-fast);
+  }
+
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-main);
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .nav-list { display: flex; }
+    .header-actions { display: block; }
+    .menu-toggle { display: none; }
+  }
+</style>
+
+<script>
+  // Simple mobile menu toggle functionality could go here
+</script>

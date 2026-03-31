@@ -1,0 +1,87 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+	badge?: string;
+	href?: string;
+  badgeType?: 'primary' | 'accent' | 'success';
+}
+
+const { title, description, image, badge, href, badgeType = 'primary' } = Astro.props;
+---
+
+<div class="card card-component">
+	{image && (
+		<div class="card-image-wrap">
+			<img src={image} alt={title} class="card-image" loading="lazy" />
+			{badge && <span class={`badge card-badge badge-${badgeType}`}>{badge}</span>}
+		</div>
+	)}
+	<div class="card-content">
+		{!image && badge && <span class={`badge mb-1 badge-${badgeType}`}>{badge}</span>}
+		<h3 class="text-h4 card-title">
+			{href ? <a href={href} class="card-link">{title}</a> : title}
+		</h3>
+		{description && <p class="text-body mt-1 text-muted">{description}</p>}
+		<slot />
+	</div>
+</div>
+
+<style>
+	.card-component {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.card-image-wrap {
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: 16/9;
+	}
+
+	.card-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform var(--transition-slow);
+	}
+
+	.card-component:hover .card-image {
+		transform: scale(1.05);
+	}
+
+	.card-badge {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 10;
+	}
+
+	.badge-primary { background-color: var(--color-primary); color: white; }
+	.badge-accent { background-color: var(--color-accent); color: white; }
+	.badge-success { background-color: var(--color-success); color: white; }
+
+	.card-content {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.card-title {
+		margin-bottom: 0.5rem;
+	}
+
+	.card-link::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+  
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+</style>

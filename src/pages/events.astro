@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Events" description="Join our community events in Chirripo.">
+	<div class="page-header bg-dark text-center">
+		<div class="container">
+			<h1 class="text-h1 mb-2">Community Events</h1>
+			<p class="text-lead" style="color: var(--color-text-light);">Connecting through music, art, and good vibes.</p>
+		</div>
+	</div>
+
+	<div class="container section">
+		<div class="grid-2">
+			<Card 
+				title="Open Mic & Karaoke" 
+				description="Join us every Saturday evening starting at 6pm. Our Karaoke app has over 45,000 songs to choose from and allows for duets. Jams, improvs, slam poets, comedy skits and more are welcome!"
+				badge="Every Saturday"
+				badgeType="primary"
+			>
+				<p class="text-body mt-2"><strong>Time:</strong> 6:00 PM</p>
+				<p class="text-body mt-1"><strong>Location:</strong> Kapi Kapi Cafe</p>
+				<button class="btn btn-outline mt-4">Learn More</button>
+			</Card>
+			
+			<Card 
+				title="Live Concerts" 
+				description="We offer periodic concerts from exceptional musicians from Costa Rica and around the world. Bring your dancing shoes, as the vibe is sometimes so contagious you will want to get your groove on."
+				badge="Periodic"
+				badgeType="accent"
+			>
+				<p class="text-body mt-2 text-muted">Check our social media for the latest concert announcements and lineups.</p>
+				<a href="https://www.facebook.com/kapikapichirripo" target="_blank" class="btn btn-outline mt-4">Follow on Facebook</a>
+			</Card>
+			
+			<Card 
+				title="Creative Workshops" 
+				description="Occasional community-led workshops focusing on health, wellness, organic farming, and creative arts. Stay tuned for our schedule."
+				badge="Upcoming"
+				badgeType="success"
+			/>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.page-header {
+		padding: 6rem 0 4rem;
+	}
+</style>
